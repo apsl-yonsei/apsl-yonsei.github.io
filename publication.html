@@ -119,6 +119,28 @@
                     padding: 8px 0 !important;
                 }
             }
+                /* 페이지 상단 배경 이미지 헤더 */
+                .page-header {
+                    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/img/background2.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 0;
+                    padding-top: 80px;
+                }
+                .page-header h1 {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 3.5rem;
+                    text-align: center;
+                    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+                    font-family: 'Montserrat', sans-serif;
+                    margin: 0;
+                }
         </style>
     </head>
     <body id="page-top">
@@ -152,10 +174,14 @@
         </nav>
 
         <!-- Publication Section -->
-        <section class="page-section" style="padding-top: 150px;">
-            <div class="container">
-                <h2 class="section-title">Publication</h2>
-                
+        <!-- 페이지 상단 배경 이미지 헤더 -->
+        <header class="page-header">
+            <h1>Publication</h1>
+        </header>
+        
+        <!-- 본문 시작 -->
+        <section class="page-section" style="padding-top: 60px;">
+            <div class="container">                
                 <!-- International Journal -->
                 <div style="margin-bottom: 50px;">
                     <h3 class="sub-title">International Journal</h3>
