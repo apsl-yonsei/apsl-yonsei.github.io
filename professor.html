@@ -100,6 +100,25 @@
             .info-link:hover {
                 text-decoration: underline;
             }
+            /* 데스크탑: People에 마우스 올리면 드롭다운 자동으로 펼쳐짐 */
+            @media (min-width: 992px) {
+                #mainNav .nav-item.dropdown:hover .dropdown-menu {
+                    display: block;
+                }
+            }
+            /* 모바일: 드롭다운 메뉴를 평소엔 펼쳐서 보여줌 */
+            @media (max-width: 991px) {
+                #mainNav .dropdown-menu {
+                    display: block;
+                    border: none;
+                    box-shadow: none;
+                    padding-left: 20px;
+                    background-color: transparent;
+                }
+                #mainNav .dropdown-item {
+                    padding: 8px 0 !important;
+                }
+            }
         </style>
     </head>
     <body id="page-top">
