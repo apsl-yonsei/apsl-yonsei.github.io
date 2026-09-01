@@ -85,19 +85,21 @@
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+        <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
             <div class="publication-stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
                 <div class="publication-stat-value text-blue-800">6</div>
                 <p class="publication-stat-label text-sm text-gray-700">Journal Papers</p>
             </div>
-            <div class="publication-stat-card bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 text-center">
-                <div class="publication-stat-value text-amber-800">2019&ndash;2026</div>
-                <p class="publication-stat-label text-sm text-gray-700">Years Covered</p>
-            </div>
-            <div class="publication-stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center col-span-2 sm:col-span-1">
-                <div class="publication-stat-value text-blue-800">1</div>
-                <p class="publication-stat-label text-sm text-gray-700">Editor's Choice</p>
-            </div>
+            <button type="button" onclick="document.getElementById('intl-journal').scrollIntoView({behavior:'smooth'})"
+                    class="publication-stat-card bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 text-center hover:shadow-md hover:scale-105 transition-all cursor-pointer">
+                <div class="publication-stat-value text-green-800">6</div>
+                <p class="publication-stat-label text-sm text-gray-700">International</p>
+            </button>
+            <button type="button" onclick="document.getElementById('domestic-journal').scrollIntoView({behavior:'smooth'})"
+                    class="publication-stat-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 text-center hover:shadow-md hover:scale-105 transition-all cursor-pointer">
+                <div class="publication-stat-value text-purple-800">0</div>
+                <p class="publication-stat-label text-sm text-gray-700">Domestic</p>
+            </button>
         </div>
 
         <!-- Search -->
@@ -115,7 +117,7 @@
             </p>
         </div>
 
-        <h2 class="text-lg font-semibold text-brand-navy mb-6">International Journal</h2>
+        <h2 id="intl-journal" class="text-lg font-semibold text-brand-navy mb-6 scroll-mt-24">International Journal</h2>
 
         <div id="pub-list">
         <div class="pub-year mb-8" data-year="2026">
@@ -137,6 +139,12 @@
             <div class="pub-item text-sm text-gray-700">Hoang Nguyen, Suhwan Lee, <span class="text-author-pi">Jongchan Kim</span>, Jonghyeon Ko, Marco Comuzzi (2019). Autoencoders for improving quality of process event logs. <em>Expert Systems with Applications</em>, 131, 132-147</div>
         </div>
         </div>
+
+        <h2 id="domestic-journal" class="text-lg font-semibold text-brand-navy mt-14 mb-6 scroll-mt-24">Domestic Journal</h2>
+        <div class="bg-white rounded-2xl shadow-sm p-8 text-center text-gray-500 text-sm">
+            국내 저널 논문 정보가 아직 없습니다.
+        </div>
+
         <p id="no-results-message" class="hidden text-center text-gray-500 py-10">No matching publications found.</p>
     </div>
 </section>
@@ -169,7 +177,6 @@
                 <div class="flex items-center gap-3 mb-4">
                     <img src="assets/img/연구실_최종로고_white.png" alt="APSL - Applied Process Science Lab" class="h-12 w-auto object-contain">
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed">"Bridging Processes and AI for Intelligent Systems"</p>
             </div>
             <div>
                 <h4 class="font-semibold text-brand-off-white mb-4">Quick Links</h4>
