@@ -93,12 +93,12 @@
             <button type="button" onclick="document.getElementById('intl-conf').scrollIntoView({behavior:'smooth'})"
                     class="publication-stat-card bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 text-center hover:shadow-md hover:scale-105 transition-all cursor-pointer">
                 <div class="publication-stat-value text-orange-800">5</div>
-                <p class="publication-stat-label text-sm text-gray-700">International Conference Papers</p>
+                <p class="publication-stat-label text-sm text-gray-700">International</p>
             </button>
             <button type="button" onclick="document.getElementById('domestic-conf').scrollIntoView({behavior:'smooth'})"
                     class="publication-stat-card bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg p-6 text-center hover:shadow-md hover:scale-105 transition-all cursor-pointer">
                 <div class="publication-stat-value text-yellow-800">4</div>
-                <p class="publication-stat-label text-sm text-gray-700">Domestic Conference Papers</p>
+                <p class="publication-stat-label text-sm text-gray-700">Domestic</p>
             </button>
         </div>
 
@@ -112,39 +112,86 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
             </div>
+            <p class="text-center text-xs text-gray-500 mt-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-sm align-middle mr-1" style="background:var(--author-pi)"></span> Yonsei APSL members
+            </p>
         </div>
 
         <div id="pub-list">
         <h2 id="intl-conf" class="text-lg font-semibold text-brand-navy mb-6 scroll-mt-24">International Conference</h2>
-        <div class="pub-year mb-8" data-year="2026">
-            <h3>2026</h3>
-            <div class="pub-item text-sm text-gray-700">Juyong Lee, <span class="text-author-pi">Jongchan Kim</span> (2026). Cross-Domain Convergence in Business Process Management: A Temporal Link Prediction Approach. <em>Workshop on Possible Futures of Business Process Management Workshop, 24th International Conference on Business Process Management (BPM 2026), Toronto, Canada</em></div>
-            <div class="pub-item text-sm text-gray-700">Seon Kim, Chaeyeon Park, Youngwoo Ko, Hyunwoo Jo, <span class="text-author-pi">Jongchan Kim</span> (2026). A comparative analysis of trace encoding methods for next activity predictive process monitoring. <em>2nd Asia-Pacific Symposium on Process and AI (ASPAI 2026), Pohang, Republic of Korea</em></div>
+<div class="pub-year mb-4" data-year="2026"><h3>2026</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
-        <div class="pub-year mb-8" data-year="2025">
-            <h3>2025</h3>
-            <div class="pub-item text-sm text-gray-700">Seon Kim, Jungtak Oh, <span class="text-author-pi">Jongchan Kim</span> (2025). Bus stop congestion monitoring based on process discovery algorithms. <em>Empirical Research in Process Mining Workshop, 7th International Conference on Process Mining (ICPM 2025), Montevideo, Uruguay</em></div>
-            <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span> (2025). Prediction of intensive care unit admission in sepsis patients based on activity sequence from event logs. <em>INFORMS International Meeting, Singapore, Singapore</em></div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Cross-Domain Convergence in Business Process Management: A Temporal Link Prediction Approach</p>
+        <p class="text-sm mt-1.5 pub-authors">Juyong Lee, <span class="text-author-pi">Jongchan Kim</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">Workshop on Possible Futures of Business Process Management Workshop, 24th International Conference on Business Process Management (BPM 2026), Toronto, Canada</p>
+    </div><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
-        <div class="pub-year mb-10" data-year="2019">
-            <h3>2019</h3>
-            <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span> (2019). Enhancing the quality of predictions in predictive business process monitoring. <em>Doctoral Consortium, 1st International Conference on Process Mining (ICPM 2019), Aachen, Germany</em></div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">A comparative analysis of trace encoding methods for next activity predictive process monitoring</p>
+        <p class="text-sm mt-1.5 pub-authors">Seon Kim, Chaeyeon Park, Youngwoo Ko, Hyunwoo Jo, <span class="text-author-pi">Jongchan Kim</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">2nd Asia-Pacific Symposium on Process and AI (ASPAI 2026), Pohang, Republic of Korea</p>
+    </div></div></div><div class="pub-year mb-4" data-year="2025"><h3>2025</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
-
-        <h2 id="domestic-conf" class="text-lg font-semibold text-brand-navy mb-6 scroll-mt-24">Domestic Conference</h2>
-        <div class="pub-year mb-8" data-year="2025">
-            <h3>2025</h3>
-            <div class="pub-item text-sm text-gray-700">김세온, <span class="text-author-pi">김종찬</span>. (2025). 프로세스 디스커버리 알고리즘 기반 버스정류장 혼잡도 모니터링. <em>한국인공지능융합기술학회 춘계학술대회 2025</em></div>
-            <div class="pub-item text-sm text-gray-700">오정탁, <span class="text-author-pi">김종찬</span>. (2025). 프로세스 적합성 검사를 활용한 버스 정시성 평가 프레임워크 개발. <em>한국인공지능융합기술학회 춘계학술대회 2025</em></div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Bus stop congestion monitoring based on process discovery algorithms</p>
+        <p class="text-sm mt-1.5 pub-authors">Seon Kim, Jungtak Oh, <span class="text-author-pi">Jongchan Kim</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">Empirical Research in Process Mining Workshop, 7th International Conference on Process Mining (ICPM 2025), Montevideo, Uruguay</p>
+    </div><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
-        <div class="pub-year mb-8" data-year="2021">
-            <h3>2021</h3>
-            <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi (2021). Measuring the anomaly detection stability of different anomaly patterns in business processes. <em>KIIE (Korea Institute of Industrial Engineers) Annual Spring Conference</em></div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Prediction of intensive care unit admission in sepsis patients based on activity sequence from event logs</p>
+        <p class="text-sm mt-1.5 pub-authors"><span class="text-author-pi">Jongchan Kim</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">INFORMS International Meeting, Singapore, Singapore (2025)</p>
+    </div></div></div><div class="pub-year mb-8" data-year="2019"><h3>2019</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
-        <div class="pub-year" data-year="2018">
-            <h3>2018</h3>
-            <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi (2018). Handling imbalanced data in real-time prediction of activities in business processes. <em>KIIE (Korea Institute of Industrial Engineers) Annual Spring Conference</em></div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Enhancing the quality of predictions in predictive business process monitoring</p>
+        <p class="text-sm mt-1.5 pub-authors"><span class="text-author-pi">Jongchan Kim</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">Doctoral Consortium, 1st International Conference on Process Mining (ICPM 2019), Aachen, Germany</p>
+    </div></div></div><h2 id="domestic-conf" class="text-lg font-semibold text-brand-navy mb-6 mt-10 scroll-mt-24">Domestic Conference</h2><div class="pub-year mb-4" data-year="2025"><h3>2025</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
         </div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">프로세스 디스커버리 알고리즘 기반 버스정류장 혼잡도 모니터링</p>
+        <p class="text-sm mt-1.5 pub-authors">김세온, <span class="text-author-pi">김종찬</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">한국인공지능융합기술학회 춘계학술대회 2025</p>
+    </div><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
+        </div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">프로세스 적합성 검사를 활용한 버스 정시성 평가 프레임워크 개발</p>
+        <p class="text-sm mt-1.5 pub-authors">오정탁, <span class="text-author-pi">김종찬</span></p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">한국인공지능융합기술학회 춘계학술대회 2025</p>
+    </div></div></div><div class="pub-year mb-4" data-year="2021"><h3>2021</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
+        </div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Measuring the anomaly detection stability of different anomaly patterns in business processes</p>
+        <p class="text-sm mt-1.5 pub-authors"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi</p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">KIIE (Korea Institute of Industrial Engineers) Annual Spring Conference (2021)</p>
+    </div></div></div><div class="pub-year" data-year="2018"><h3>2018</h3><div class="space-y-3"><div class="publication-item p-4 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Conference</span>
+            
+        </div>
+        <p class="font-semibold text-brand-navy text-base md:text-lg pub-title">Handling imbalanced data in real-time prediction of activities in business processes</p>
+        <p class="text-sm mt-1.5 pub-authors"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi</p>
+        <p class="text-sm text-gray-500 italic mt-1 pub-venue">KIIE (Korea Institute of Industrial Engineers) Annual Spring Conference (2018)</p>
+    </div></div></div>
         </div>
         <p id="no-results-message" class="hidden text-center text-gray-500 py-10">No matching publications found.</p>
     </div>
@@ -153,15 +200,50 @@
 (function() {
     const input = document.getElementById('publication-search');
     if (!input) return;
+
+    document.querySelectorAll('#pub-list .publication-item').forEach(function(item) {
+        ['pub-title', 'pub-authors', 'pub-venue'].forEach(function(cls) {
+            const el = item.querySelector('.' + cls);
+            if (el) el.dataset.original = el.innerHTML;
+        });
+    });
+
+    function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+    function highlight(el, query) {
+        if (!el) return;
+        if (!query) { el.innerHTML = el.dataset.original; return; }
+        const temp = document.createElement('div');
+        temp.innerHTML = el.dataset.original;
+        const re = new RegExp('(' + escapeRegExp(query) + ')', 'ig');
+        (function walk(node) {
+            Array.from(node.childNodes).forEach(function(child) {
+                if (child.nodeType === 3 && re.test(child.textContent)) {
+                    const span = document.createElement('span');
+                    span.innerHTML = child.textContent.replace(re, '<mark class="search-highlight">$1</mark>');
+                    child.replaceWith(span);
+                } else if (child.nodeType === 1) {
+                    walk(child);
+                }
+            });
+        })(temp);
+        el.innerHTML = temp.innerHTML;
+    }
+
     input.addEventListener('input', function() {
         const q = this.value.trim().toLowerCase();
         let anyVisible = false;
         document.querySelectorAll('#pub-list .pub-year').forEach(function(yearBlock) {
             let groupHasVisible = false;
-            yearBlock.querySelectorAll('.pub-item').forEach(function(item) {
+            yearBlock.querySelectorAll('.publication-item').forEach(function(item) {
                 const match = item.textContent.toLowerCase().includes(q);
                 item.style.display = match ? '' : 'none';
-                if (match) { groupHasVisible = true; anyVisible = true; }
+                if (match) {
+                    groupHasVisible = true; anyVisible = true;
+                    highlight(item.querySelector('.pub-title'), q);
+                    highlight(item.querySelector('.pub-authors'), q);
+                    highlight(item.querySelector('.pub-venue'), q);
+                }
             });
             yearBlock.style.display = groupHasVisible ? '' : 'none';
         });
