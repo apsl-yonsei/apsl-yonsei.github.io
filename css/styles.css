@@ -6,7 +6,7 @@
     --brand-teal: #B8935A;      /* Yonsei Gold — secondary accent */
     --brand-silver: #9CA3AF;    /* Yonsei Silver — muted/neutral text */
     --brand-black: #111111;     /* Yonsei Black */
-    --author-pi: #003876;
+    --author-pi: #1565C0;
 }
 
 body {
@@ -96,7 +96,7 @@ body {
 }
 .pub-item, .proj-item { padding: .75rem 0; border-bottom: 1px solid rgba(11,31,28,0.08); line-height: 1.6; }
 .pub-item:last-child, .proj-item:last-child { border-bottom: none; }
-.text-author-pi { color: var(--author-pi); font-weight: 600; }
+.text-author-pi { color: var(--author-pi); font-weight: 700; }
 
 /* Publication stat cards */
 .publication-stat-card {
