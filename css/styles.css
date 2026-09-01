@@ -6,7 +6,6 @@
     --brand-teal: #B8935A;      /* Yonsei Gold — secondary accent */
     --brand-silver: #9CA3AF;    /* Yonsei Silver — muted/neutral text */
     --brand-black: #111111;     /* Yonsei Black */
-    --author-pi: #1E40AF;
 }
 
 body {
@@ -96,7 +95,8 @@ body {
 }
 .pub-item, .proj-item { padding: .75rem 0; border-bottom: 1px solid rgba(11,31,28,0.08); line-height: 1.6; }
 .pub-item:last-child, .proj-item:last-child { border-bottom: none; }
-.text-author-pi { color: var(--author-pi); font-weight: 700; }
+.text-author-pi-journal { color: #2100ED; font-weight: 700; }
+.text-author-pi-conference { color: #ED0050; font-weight: 700; }
 
 /* Publication stat cards */
 .publication-stat-card {
@@ -136,7 +136,7 @@ body {
 
 /* Members */
 .member-card { text-align: center; }
-.member-card img { width: 128px; height: 128px; object-fit: cover; border-radius: 9999px; margin: 0 auto 1rem; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+.member-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 9999px; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
 
 /* Hero */
 .hero-gradient { background: linear-gradient(135deg, rgba(14,124,102,0.08), rgba(37,99,235,0.06)); }
