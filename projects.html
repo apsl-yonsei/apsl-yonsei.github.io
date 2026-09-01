@@ -77,31 +77,117 @@
 <main>
 
 <section class="py-16 md:py-20">
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-10">Projects</h1>
-        <div class="proj-year mb-8">
-            <h3>2026</h3>
-            <div class="proj-item text-sm text-gray-700">
-                <p>AI 머신비전 및 프로세스마이닝 기반 실시간 생산 데이터 수집·불량 선별 및 품질 예측 시스템 개발. 강원 지역성장 인재양성체계(앵커) 산학공동기술개발과제 (2026.06 ~ 2027.02)</p>
-                <p class="text-gray-500 mt-1">Development of a Real-Time Production Data Collection, Defect Sorting, and Quality Prediction System Based on AI Machine Vision and Process Mining. Industry-Academia Joint R&amp;D Project under the Gangwon Regional Growth Talent Fostering System (Anchor) (2026.06 ~ 2027.02)</p>
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-10 text-center">Projects</h1>
+
+        <div class="flex flex-col md:flex-row gap-4 items-center mb-10">
+            <div class="relative flex-1 w-full">
+                <input type="search" id="project-search"
+                       placeholder="Search projects by title or agency..."
+                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent text-sm">
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <div class="flex gap-2">
+                <button type="button" data-filter="all" class="filter-btn active px-4 py-2 text-sm font-medium bg-brand-accent text-white rounded-lg transition-all">All</button>
+                <button type="button" data-filter="ongoing" class="filter-btn px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg transition-all">Ongoing</button>
+                <button type="button" data-filter="completed" class="filter-btn px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 rounded-lg transition-all">Completed</button>
             </div>
         </div>
-        <div class="proj-year mb-8">
-            <h3>2025</h3>
-            <div class="proj-item text-sm text-gray-700">
-                <p>DTC 유전자 검사를 활용한 개인 맞춤형 헬스케어 및 스킨케어 솔루션 개발. 연세대학교 의료AI반도체전문인력양성사업단 산학협력 프로젝트 (2025.03 ~ 2025.10)</p>
-                <p class="text-gray-500 mt-1">Development of Personalized Healthcare and Skincare Solutions Using DTC Genetic Testing. Yonsei University Industry-Academia Collaboration Project of the Medical AI Semiconductor Specialist Training Program (2025.03 ~ 2025.10)</p>
-            </div>
+
+        <div id="project-list" class="space-y-4">
+<div class="project-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-6 border-l-4 border-brand-accent" data-status="ongoing">
+        <div class="flex items-center gap-3 mb-2 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 bg-brand-accent text-white text-xs font-medium px-2.5 py-1 rounded-full">진행중</span>
+            <span class="text-sm text-gray-500">2026.06 ~ 2027.02</span>
         </div>
-        <div class="proj-year">
-            <h3>2024</h3>
-            <div class="proj-item text-sm text-gray-700">
-                <p>딥러닝 기반 멀티모달 프로세스마이닝 프레임워크 개발. 연세대학교 미래캠퍼스 (2024.03 ~ 2027.02)</p>
-                <p class="text-gray-500 mt-1">Development of a Deep Learning-Based Multimodal Process Mining Framework. Yonsei University Mirae Campus (2024.03 ~ 2027.02)</p>
+        <h4 class="text-lg font-semibold text-brand-navy proj-title">AI 머신비전 및 프로세스마이닝 기반 실시간 생산 데이터 수집·불량 선별 및 품질 예측 시스템 개발</h4>
+        <p class="text-sm text-gray-600 italic mt-1">Development of a Real-Time Production Data Collection, Defect Sorting, and Quality Prediction System Based on AI Machine Vision and Process Mining</p>
+        <div class="mt-3 flex items-start">
+            <span class="text-sm font-medium text-gray-700 w-16 flex-shrink-0">기관:</span>
+            <span class="text-sm text-gray-600 proj-agency">강원 지역성장 인재양성체계(앵커) 산학공동기술개발과제</span>
+        </div>
+    </div><div class="project-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-6 border-l-4 border-brand-accent" data-status="ongoing">
+        <div class="flex items-center gap-3 mb-2 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 bg-brand-accent text-white text-xs font-medium px-2.5 py-1 rounded-full">진행중</span>
+            <span class="text-sm text-gray-500">2024.03 ~ 2027.02</span>
+        </div>
+        <h4 class="text-lg font-semibold text-brand-navy proj-title">딥러닝 기반 멀티모달 프로세스마이닝 프레임워크 개발</h4>
+        <p class="text-sm text-gray-600 italic mt-1">Development of a Deep Learning-Based Multimodal Process Mining Framework</p>
+        <div class="mt-3 flex items-start">
+            <span class="text-sm font-medium text-gray-700 w-16 flex-shrink-0">기관:</span>
+            <span class="text-sm text-gray-600 proj-agency">연세대학교 미래캠퍼스</span>
+        </div>
+    </div><div class="project-item bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-6 border-l-4 border-gray-300" data-status="completed">
+        <div class="flex items-center gap-3 mb-2 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">완료</span>
+            <span class="text-sm text-gray-500">2025.03 ~ 2025.10</span>
+        </div>
+        <h4 class="text-lg font-semibold text-brand-navy proj-title">DTC 유전자 검사를 활용한 개인 맞춤형 헬스케어 및 스킨케어 솔루션 개발</h4>
+        <p class="text-sm text-gray-600 italic mt-1">Development of Personalized Healthcare and Skincare Solutions Using DTC Genetic Testing</p>
+        <div class="mt-3 flex items-start">
+            <span class="text-sm font-medium text-gray-700 w-16 flex-shrink-0">기관:</span>
+            <span class="text-sm text-gray-600 proj-agency">연세대학교 의료AI반도체전문인력양성사업단</span>
+        </div>
+    </div>
+        </div>
+        <p id="no-results-message" class="hidden text-center text-gray-500 py-10">No matching projects found.</p>
+
+        <div class="mt-16 bg-blue-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-brand-navy mb-6 text-center">Project Statistics</h3>
+            <div class="grid grid-cols-3 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-brand-accent mb-2">3</div>
+                    <p class="text-gray-600 text-sm">Total Projects</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-accent mb-2">2</div>
+                    <p class="text-gray-600 text-sm">Ongoing</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-gray-500 mb-2">1</div>
+                    <p class="text-gray-600 text-sm">Completed</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<script>
+(function() {
+    const search = document.getElementById('project-search');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('#project-list .project-item');
+    let currentFilter = 'all';
+
+    function applyFilters() {
+        const q = search.value.trim().toLowerCase();
+        let anyVisible = false;
+        items.forEach(function(item) {
+            const matchesFilter = currentFilter === 'all' || item.dataset.status === currentFilter;
+            const matchesSearch = !q || item.textContent.toLowerCase().includes(q);
+            const visible = matchesFilter && matchesSearch;
+            item.style.display = visible ? '' : 'none';
+            if (visible) anyVisible = true;
+        });
+        document.getElementById('no-results-message').classList.toggle('hidden', anyVisible);
+    }
+
+    search.addEventListener('input', applyFilters);
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(function(b) {
+                b.classList.remove('active', 'bg-brand-accent', 'text-white');
+                b.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            btn.classList.add('active', 'bg-brand-accent', 'text-white');
+            btn.classList.remove('bg-gray-200', 'text-gray-700');
+            currentFilter = btn.dataset.filter;
+            applyFilters();
+        });
+    });
+})();
+</script>
 
 </main>
 <footer class="bg-brand-navy text-brand-off-white mt-16">
