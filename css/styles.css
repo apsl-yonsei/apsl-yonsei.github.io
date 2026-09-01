@@ -1,10 +1,12 @@
-/* ===== APSL Design System (FELAB-style, adapted) ===== */
+/* ===== APSL Design System — Yonsei University brand palette ===== */
 :root {
-    --brand-navy: #0B1F1C;
-    --brand-off-white: #F6F8F7;
-    --brand-accent: #0E7C66;
-    --brand-teal: #2563EB;
-    --author-pi: #0E7C66;
+    --brand-navy: #0A1A30;      /* Yonsei Blue, deepened toward black for header/footer/text */
+    --brand-off-white: #F5F7FA;
+    --brand-accent: #003876;    /* Yonsei Blue (official) — primary interactive color */
+    --brand-teal: #B8935A;      /* Yonsei Gold — secondary accent */
+    --brand-silver: #9CA3AF;    /* Yonsei Silver — muted/neutral text */
+    --brand-black: #111111;     /* Yonsei Black */
+    --author-pi: #003876;
 }
 
 body {
@@ -21,8 +23,12 @@ body {
 .text-brand-accent { color: var(--brand-accent); }
 .bg-brand-teal { background-color: var(--brand-teal); }
 .text-brand-teal { color: var(--brand-teal); }
-.bg-brand-accent\/10 { background-color: rgba(14, 124, 102, .1); }
-.bg-brand-teal\/10 { background-color: rgba(37, 99, 235, .1); }
+.bg-brand-accent\/10 { background-color: rgba(0, 56, 118, .08); }
+.bg-brand-teal\/10 { background-color: rgba(184, 147, 90, .12); }
+.text-brand-silver { color: var(--brand-silver); }
+.bg-brand-silver { background-color: var(--brand-silver); }
+.text-brand-black { color: var(--brand-black); }
+.bg-brand-black { background-color: var(--brand-black); }
 .hover\:text-brand-accent:hover { color: var(--brand-accent); }
 .hover\:bg-brand-accent:hover { background-color: var(--brand-accent); }
 
@@ -35,11 +41,11 @@ body {
     backdrop-filter: blur(10px);
 }
 .nav-link.active { color: var(--brand-navy) !important; font-weight: 600; }
-.nav-link { color: #4B5563; }
+.nav-link { color: #4B5563; display: inline-flex; align-items: center; line-height: 1.25rem; }
 .nav-link:hover { color: var(--brand-accent); }
 
 /* Dropdown (People / Publication) */
-.has-dropdown { position: relative; }
+.has-dropdown { position: relative; display: inline-flex; align-items: center; }
 .dropdown-panel {
     position: absolute; top: 100%; left: 0; min-width: 10rem;
     background: white; border-radius: .75rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
@@ -55,6 +61,7 @@ body {
 .dropdown-panel a:hover { background: #F3F4F6; color: var(--brand-accent); }
 
 @media (max-width: 1023px) {
+    .has-dropdown { display: block; }
     .dropdown-panel {
         position: static; opacity: 1; visibility: visible; transform: none;
         box-shadow: none; border: none; padding-left: 1rem; display: none;
