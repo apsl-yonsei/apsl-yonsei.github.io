@@ -77,74 +77,100 @@
 <main>
 
 <section class="py-16 md:py-20">
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Research</h1>
-        <div class="mb-14">
-            <h2 class="text-xl font-semibold text-brand-navy mb-3">Research Overview</h2>
-            <p class="text-gray-600 leading-relaxed max-w-3xl">
-                Our lab aims to solve real-world business problems by advancing research in
-                process science, data science, and process mining which bridges two disciplines.
-            </p>
-            <img src="assets/img/research_overview.png" alt="Research Overview Diagram"
-                 class="mt-6 rounded-2xl shadow-md bg-white p-4 w-full max-w-3xl">
+    <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-4 text-center">Research</h1>
+        <p class="text-gray-500 text-center max-w-2xl mx-auto mb-16">
+            Bridging process science and data science to solve real-world business problems.
+        </p>
+
+        <!-- Overview -->
+        <div class="grid md:grid-cols-5 gap-10 lg:gap-14 items-center mb-24">
+            <div class="md:col-span-2">
+                <h2 class="text-2xl font-bold text-brand-navy mb-4">Research Overview</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Our lab aims to solve real-world business problems by advancing research in
+                    process science, data science, and process mining which bridges two disciplines.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent flex-shrink-0"></span>
+                        <span class="text-sm text-gray-700">Process Science &times; Data Science</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent flex-shrink-0"></span>
+                        <span class="text-sm text-gray-700">Event-log-driven methodology</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent flex-shrink-0"></span>
+                        <span class="text-sm text-gray-700">Real-world industrial application</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-3">
+                <div class="rounded-2xl shadow-lg bg-white p-6 border border-gray-100">
+                    <img src="assets/img/research_overview.png" alt="Research Overview Diagram" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
         </div>
 
-        <h2 class="text-xl font-semibold text-brand-navy mb-8">Research Areas</h2>
-        <div class="space-y-16">
-            <div class="research-block">
-                <img src="assets/img/research_process_discovery.png" alt="Process Model Discovery">
-                <div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-2">Process Model Discovery</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                        Process model discovery is the technique of extracting and constructing a comprehensive model
-                        of a business process from event logs. This involves analyzing data from information systems
-                        to uncover the actual sequence of activities within a process, rather than relying on
-                        preconceived notions or manual modeling. Our lab not only utilizes existing process model
-                        discovery techniques but also develops novel ones.
-                    </p>
-                    <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                        <li>Development of novel process model discovery algorithms</li>
-                        <li>Optimization of existing process model discovery algorithms</li>
-                        <li>Industrial application of process model discovery algorithms</li>
-                    </ul>
+        <!-- Research Areas -->
+        <h2 class="text-2xl font-bold text-brand-navy mb-8 text-center">Research Areas</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-8 border-t-4 border-red-400">
+                <div class="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-5">
+                    <svg class="w-7 h-7 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
                 </div>
+                <h3 class="text-lg font-bold text-brand-navy mb-3">Process Model Discovery</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    Extracting and constructing a comprehensive model of a business process from event logs &mdash;
+                    uncovering the actual sequence of activities rather than relying on preconceived or manual models.
+                </p>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li class="flex gap-2"><span class="text-red-400 mt-0.5">&bull;</span><span>Development of novel discovery algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-red-400 mt-0.5">&bull;</span><span>Optimization of existing algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-red-400 mt-0.5">&bull;</span><span>Industrial application</span></li>
+                </ul>
             </div>
 
-            <div class="research-block md:[&>*:first-child]:order-2">
-                <div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-2">Process Conformance Checking / Anomaly Detection</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                        Process conformance checking compares an actual business process, as recorded in event logs,
-                        with a predefined reference model to determine how closely the real-life process adheres to
-                        the expected model. Process anomaly detection identifies unusual or unexpected patterns in
-                        business process executions that deviate from standard behavior.
-                    </p>
-                    <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                        <li>Development of novel process conformance checking algorithms</li>
-                        <li>Optimization of existing process conformance checking algorithms</li>
-                        <li>Industrial application of process conformance checking algorithms</li>
-                    </ul>
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-8 border-t-4 border-amber-400">
+                <div class="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-5">
+                    <svg class="w-7 h-7 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
                 </div>
-                <img src="assets/img/research_conformance.png" alt="Process Conformance Checking">
+                <h3 class="text-lg font-bold text-brand-navy mb-3">Conformance Checking &amp; Anomaly Detection</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    Comparing real process executions against reference models to measure adherence, and
+                    identifying unusual patterns that deviate from standard behavior &mdash; errors, fraud, or inefficiencies.
+                </p>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span>Development of novel checking algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span>Optimization of existing algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span>Industrial application</span></li>
+                </ul>
             </div>
 
-            <div class="research-block">
-                <img src="assets/img/research_predictive.png" alt="Predictive Process Monitoring">
-                <div>
-                    <h3 class="text-lg font-bold text-brand-navy mb-2">Predictive Process Monitoring</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                        Predictive process monitoring uses data analysis and machine learning to anticipate future
-                        states (e.g. next activity, remaining time, outcome) of business processes based on historical
-                        and real-time data. Our lab focuses on event log encoding techniques and adapting machine /
-                        deep learning methods tailored for predictive process monitoring tasks.
-                    </p>
-                    <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
-                        <li>Development of novel predictive process monitoring algorithms</li>
-                        <li>Optimization of existing predictive process monitoring algorithms</li>
-                        <li>Industrial application of predictive process monitoring algorithms</li>
-                    </ul>
+            <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-8 border-t-4 border-blue-400">
+                <div class="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+                    <svg class="w-7 h-7 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
                 </div>
+                <h3 class="text-lg font-bold text-brand-navy mb-3">Predictive Process Monitoring</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                    Using data analysis and machine learning to anticipate future states of business processes
+                    &mdash; next activity, remaining time, outcome &mdash; based on historical and real-time data.
+                </p>
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span>Development of novel monitoring algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span>Optimization of existing algorithms</span></li>
+                    <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span>Industrial application</span></li>
+                </ul>
             </div>
+
         </div>
     </div>
 </section>
