@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body class="bg-brand-off-white">
 <header id="main-header" class="w-full border-b border-gray-200">
@@ -79,33 +79,87 @@
 <section class="py-16 md:py-20">
     <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl md:text-4xl font-bold text-brand-navy mb-8">Publication</h1>
-        <div class="flex gap-2 flex-wrap mb-8">
+        <div class="flex gap-2 flex-wrap mb-10">
             <a href="publication-journal.html" class="tab-btn active">Journal</a>
             <a href="publication-conference.html" class="tab-btn">Conference</a>
         </div>
 
+        <!-- Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+            <div class="publication-stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
+                <div class="publication-stat-value text-blue-800">6</div>
+                <p class="publication-stat-label text-sm text-gray-700">Journal Papers</p>
+            </div>
+            <div class="publication-stat-card bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-6 text-center">
+                <div class="publication-stat-value text-amber-800">2019&ndash;2026</div>
+                <p class="publication-stat-label text-sm text-gray-700">Years Covered</p>
+            </div>
+            <div class="publication-stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center col-span-2 sm:col-span-1">
+                <div class="publication-stat-value text-blue-800">1</div>
+                <p class="publication-stat-label text-sm text-gray-700">Editor's Choice</p>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div class="mb-8 max-w-xl mx-auto">
+            <div class="relative">
+                <input type="search" id="publication-search"
+                       placeholder="Search by title, author, or journal..."
+                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-brand-accent focus:border-brand-accent text-sm">
+                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <p class="text-center text-xs text-gray-500 mt-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-sm align-middle mr-1" style="background:var(--author-pi)"></span> APSL / Prof. Jongchan Kim
+            </p>
+        </div>
+
         <h2 class="text-lg font-semibold text-brand-navy mb-6">International Journal</h2>
 
-        <div class="pub-year mb-8">
+        <div id="pub-list">
+        <div class="pub-year mb-8" data-year="2026">
             <h3>2026</h3>
             <div class="pub-item text-sm text-gray-700">Daewoo Pak, Seon Kim, Hyunwoo Jo, <span class="text-author-pi">Jongchan Kim</span> (2026). Personalized Disease Prediction Framework based on Genomic Variants and Disease Histories using Deep Embeddings and Alignment-based Process Conformance Checking. <em>Scientific Reports</em>, Accepted</div>
             <div class="pub-item text-sm text-gray-700">Hyunwoo Jo, Seon Kim, Hyunwoo Son, <span class="text-author-pi">Jongchan Kim</span> (2026). Clinical Text Embeddings: A Systematic Review of Methods, Applications, and Future Directions. <em>International Journal of Medical Informatics</em>, 217, 106505 (Editor's Choice)</div>
         </div>
-        <div class="pub-year mb-8">
+        <div class="pub-year mb-8" data-year="2022">
             <h3>2022</h3>
             <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi, Marlon Dumas, Fabrizio Maria Maggi, Irene Teinemaa (2022). Encoding resource experience for predictive process monitoring. <em>Decision Support Systems</em>, 153, 113669</div>
         </div>
-        <div class="pub-year mb-8">
+        <div class="pub-year mb-8" data-year="2021">
             <h3>2021</h3>
             <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi (2021). A diagnostic framework for imbalanced classification in business process predictive monitoring. <em>Expert Systems with Applications</em>, 184, 115536</div>
             <div class="pub-item text-sm text-gray-700"><span class="text-author-pi">Jongchan Kim</span>, Marco Comuzzi (2021). Stability metrics for enhancing the evaluation of outcome-based business process predictive monitoring. <em>IEEE Access</em>, 9, 133461-133471</div>
         </div>
-        <div class="pub-year">
+        <div class="pub-year" data-year="2019">
             <h3>2019</h3>
             <div class="pub-item text-sm text-gray-700">Hoang Nguyen, Suhwan Lee, <span class="text-author-pi">Jongchan Kim</span>, Jonghyeon Ko, Marco Comuzzi (2019). Autoencoders for improving quality of process event logs. <em>Expert Systems with Applications</em>, 131, 132-147</div>
         </div>
+        </div>
+        <p id="no-results-message" class="hidden text-center text-gray-500 py-10">No matching publications found.</p>
     </div>
 </section>
+<script>
+(function() {
+    const input = document.getElementById('publication-search');
+    if (!input) return;
+    input.addEventListener('input', function() {
+        const q = this.value.trim().toLowerCase();
+        let anyVisible = false;
+        document.querySelectorAll('#pub-list .pub-year').forEach(function(yearBlock) {
+            let groupHasVisible = false;
+            yearBlock.querySelectorAll('.pub-item').forEach(function(item) {
+                const match = item.textContent.toLowerCase().includes(q);
+                item.style.display = match ? '' : 'none';
+                if (match) { groupHasVisible = true; anyVisible = true; }
+            });
+            yearBlock.style.display = groupHasVisible ? '' : 'none';
+        });
+        document.getElementById('no-results-message').classList.toggle('hidden', anyVisible || q === '');
+    });
+})();
+</script>
 
 </main>
 <footer class="bg-brand-navy text-brand-off-white mt-16">

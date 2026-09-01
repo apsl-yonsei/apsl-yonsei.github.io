@@ -98,6 +98,14 @@ body {
 .pub-item:last-child, .proj-item:last-child { border-bottom: none; }
 .text-author-pi { color: var(--author-pi); font-weight: 600; }
 
+/* Publication stat cards */
+.publication-stat-card {
+    min-height: 6.5rem; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: .35rem;
+}
+.publication-stat-value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.publication-stat-label { font-weight: 600; line-height: 1.2; }
+
 /* Tabs (Publication: Journal/Conference) */
 .tab-btn { padding: .5rem 1rem; border-radius: 9999px; font-weight: 600; font-size: .875rem; color: #6B7280; background: transparent; }
 .tab-btn.active { background: var(--brand-navy); color: white; }
